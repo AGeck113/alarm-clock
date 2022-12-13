@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Orbitron";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../assets/alarm-clock.ttf.woff") format("woff");
+  /* Chrome 26+, Opera 23+, Firefox 39+ */
+}
 :root {
   /* Color Variables */
 
@@ -15,20 +22,23 @@
 
 body {
   margin: 0;
-  font-family: system-ui;
+  font-family: "Orbitron", sans-serif;
+  background: black;
 }
 
 .article {
-  width: 50%;
+  width: 90%;
+  height: 10rem;
   margin: 2rem auto;
   padding: 1rem 3rem;
   background-color: var(--color-foam);
-  box-shadow: var(--color-granite) 0px 2px 8px;
-  border: 1px solid var(--color-granite);
+  box-shadow: silver 0px 20px 80px;
+  border: 20px solid silver;
   border-radius: 1rem;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
   gap: 10px;
+  background-color: black;
 }
 
 .article__link {
@@ -47,4 +57,12 @@ body {
 
 .article__title {
   color: var(--color-nemo);
+}
+.number {
+  font-size: 2.4rem;
+  margin: auto;
+  color: rgba(0, 255, 0, 1);
+}
+.date {
+  color: rgba(0, 255, 0, 1);
 }
